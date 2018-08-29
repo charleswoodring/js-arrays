@@ -25,3 +25,17 @@ const palChecker = (word) => {
 palChecker('mom'); //yes
 palChecker('monkeybutt') // no
 palChecker('racecar') // yes
+
+let animals = ['roaches', 'spiders', 'wasps', 'bees'];
+
+const lastItem = animals.pop() // bees
+const firstItem = animals.shift(); // roaches
+animals.push('bat');
+animals.unshift('hippos');
+console.log(animals, animals);
+
+// (start - length - incriment)
+for(let i = 0; i<animals.length; i++){
+    //do something here
+    console.log(animals[i]);
+}
