@@ -34,7 +34,7 @@ animals.push('bat');
 animals.unshift('hippos');
 console.log(animals, animals);
 
-// (start - length - incriment)
+// for(starting value; stopping value; incrimenting value)
 for(let i = 0; i<animals.length; i++){
     //do something here
     console.log(animals[i]);
