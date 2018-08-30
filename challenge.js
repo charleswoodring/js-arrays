@@ -64,27 +64,27 @@ let elizabethSanger = {
     ],
     missionStatement: "Do good stuff",
     voterRegistrationUrl: 'www.google.com'
-};
+}; //END ARRAYS
+
+// PRINT TO DOM
     const printToDom = (stringToPrint, divId) => {
         const selectedDiv = document.getElementById(divId);
         selectedDiv.innerHTML = stringToPrint;
     };
     
-    // voter reg
+// VOTER REGISTRATION
     const voterRegristrationStringBuilder = () => {
         const newString = `<a href=https://"${elizabethSanger.voterRegistrationUrl}" target="_blank">Register to vote here</a>` ;
         printToDom(newString, 'voterRegristation');
     };
-
     
-    // donations
+// DONATIONS
     const donationFormStringBuilder = () => {
          const newString = `<a href=https://"${elizabethSanger.donationFormUrl}" target="_blank">Click to donate</a>`;
          printToDom(newString, 'donationForm');
      };
 
-
-    //statements
+// STATEMENTS
     const statementsStringBuilder = () => {
         let newString = '';
         for(let i=0; i<elizabethSanger.statements.length; i++){
@@ -95,13 +95,13 @@ let elizabethSanger = {
         printToDom(newString, 'statements');
     };
 
-    // congressional distric
+// CONGRESSIONAL DISTRICT
     const congressionalDistrictStringBuilder = () => {
         const newString = `<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2b/Tennessee_US_Congressional_District_5_%28since_2013%29.tif/lossless-page1-1200px-Tennessee_US_Congressional_District_5_%28since_2013%29.tif.png" target="_blank">Click to view map of District 5</a>`;
         printToDom(newString, 'congressionalDistrict');
     };
     
-    //events
+// EVENTS
     const eventsStringBuilder = () => {
       let newString = '';
       for(let i=0; i<elizabethSanger.events.length; i++){
@@ -113,7 +113,7 @@ let elizabethSanger = {
       printToDom(newString, 'events');
   };
 
-      //volunteers
+// VOLUNTEERS
       const volunteersStringBuilder = () => {
         let newString = '';
         for(let i=0; i<elizabethSanger.volunteers.length; i++){
@@ -129,15 +129,38 @@ let elizabethSanger = {
         printToDom(newString, 'volunteers');
     };
 
+// BIOGRAPHY
+    const biographyStringBuilder = () => {
+			newString = "I'm so cool!  please elect me";
+        printToDom(newString, 'biography');
+    };
+
+// IMAGES
+    const imagesStringBuilder = () => {
+      const newString = `<a href="http://catsatthestudios.com/wp-content/uploads/2017/12/12920541_1345368955489850_5587934409579916708_n-2-960x410.jpg" target="_blank">click to view</a>`;
+      const newString = `<a href="https://imgix.bustle.com/uploads/image/2018/4/18/5f312113-eaa8-4e71-9360-871e51084f4f-fotolia_125402501_subscription_monthly_m.jpg?w=970&h=582&fit=crop&crop=faces&auto=format&q=70" target="_blank">click to view</a>`;
+      const newString = `<a href="http://los40cl00.epimg.net/los40/imagenes/2018/08/13/actualidad/1534185434_207658_1534185597_noticia_normal.jpg" target="_blank">click to view</a>`;
+      const newString = `<a href="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX3658031.jpg" target="_blank">click to view</a>`;
+      printToDom(newString, 'images');
+    };
+
+//  MISSION STATEMENT
+      const missionStatementStringBuilder = () => {
+        newString = "Do good stuff";
+        printToDom(newString, 'missionStatement');
+      };
 
 
-    //print
-        voterRegristrationStringBuilder();
-        donationFormStringBuilder();
-        statementsStringBuilder();
-        congressionalDistrictStringBuilder(); 
-        eventsStringBuilder();   
-        volunteersStringBuilder();   
+// PRINT
+    voterRegristrationStringBuilder();
+    donationFormStringBuilder();
+    statementsStringBuilder();
+    congressionalDistrictStringBuilder(); 
+    eventsStringBuilder();   
+    volunteersStringBuilder();   
+    biographyStringBuilder();   
+    imagesStringBuilder();
+    missionStatementStringBuilder();
 
   // part 3
     //  const updateVoterRegistration = (newUrl) => {
