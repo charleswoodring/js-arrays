@@ -69,24 +69,41 @@ let elizabethSanger = {
         const selectedDiv = document.getElementById(divId);
         selectedDiv.innerHTML = stringToPrint;
     };
+    
     // voter reg
     const voterRegristrationStringBuilder = () => {
         const newString = `<a href=https://"${elizabethSanger.voterRegistrationUrl}" target="_blank">Register to vote here</a>` ;
         printToDom(newString, 'voterRegristation');
     };
-    voterRegristrationStringBuilder();
+
+    
     // donations
     const donationFormStringBuilder = () => {
-        const newString = `<a href=https://"${elizabethSanger.donationFormUrl}" target="_blank">Click to donate</a>';
-        printToDom(newString, 'donationForm');
+         const newString = `<a href=https://"${elizabethSanger.donationFormUrl}" target="_blank">Click to donate</a>`;
+         printToDom(newString, 'donationForm');
+     };
+
+
+    //statements
+    const statementsStringBuilder = () => {
+        let newString = '';
+        for(let i=0; i<elizabethSanger.statements.length; i++){
+            newString += `<div class="statement">`;
+            newString += `<h3>${elizabethSanger.statements[i].statement}</h3>`;
+            newString += `<h6>${elizabethSanger.statements[i].category}</h6>`;
+        }
+        printToDom(newString, 'statements');
     };
-    donationFormStringBuilder();
-    
 
+    //print
+        voterRegristrationStringBuilder();
+        donationFormStringBuilder();
+        statementsStringBuilder();    
 
+  // part 3
+    //  const updateVoterRegistration = (newUrl) => {
+        elizabethSanger.voterRegistrationUrl = newUrl;
+        voterRegristrationStringBuilder();
+    //  };
 
-    
-
-  //  const updateVoterRegistration = () => {
-  //      // do stuff
-  //  };
+    updateVoterRegistration('classtracker.zoeames.com');
